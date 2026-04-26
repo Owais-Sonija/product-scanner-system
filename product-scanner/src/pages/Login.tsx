@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuthStore } from '../store/authStore'
+import { Footer } from '../components/Footer'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -79,6 +80,9 @@ export default function Login() {
         <p className="text-slate-600 text-xs text-center mt-8">
           v1.0.0 · Product Scanner System
         </p>
+        <div className="mt-4">
+          <Footer />
+        </div>
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuthStore } from '../store/authStore'
 import { BarcodeScanner } from '../lib/scanner'
 import { supabase } from '../lib/supabase'
+import { Footer } from '../components/Footer'
 
 export default function ScanPage() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -188,6 +189,9 @@ export default function ScanPage() {
             {error}
           </p>
         )}
+        <div className="mt-4">
+          <Footer />
+        </div>
       </div>
     </div>
   )

@@ -9,6 +9,7 @@ import {
 } from '../types'
 import { Toggle } from '../components/ui/Toggle'
 import { ComboInput } from '../components/ui/ComboInput'
+import { Footer } from '../components/Footer'
 
 export default function RegisterProduct() {
   const { barcode } = useParams<{ barcode: string }>()
@@ -333,6 +334,7 @@ export default function RegisterProduct() {
             ) : 'REGISTER PRODUCT'}
           </button>
         )}
+        <Footer />
       </div>
     </div>
   )

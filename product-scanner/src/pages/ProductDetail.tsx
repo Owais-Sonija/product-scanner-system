@@ -4,6 +4,7 @@ import { supabase } from '../lib/supabase'
 import { useAuthStore } from '../store/authStore'
 import type { Product } from '../types'
 import { BOOLEAN_FIELDS } from '../types'
+import { Footer } from '../components/Footer'
 export default function ProductDetail() {
   const { barcode } = useParams<{ barcode: string }>()
   const [product, setProduct] = useState<Product | null>(null)
@@ -271,6 +272,9 @@ export default function ProductDetail() {
             </p>
           </div>
         )}
+        <div className="pt-4 border-t border-white/5 mt-8">
+          <Footer />
+        </div>
       </div>
     </div>
   )
